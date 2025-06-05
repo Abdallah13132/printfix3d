@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@layer base {
+  html {
+    font-family: 'Open Sans', system-ui, sans-serif;
+  }
+
+  :root {
+    --color-primary-50: #f0f9ff;
+    --color-primary-100: #e0f2fe;
+    --color-primary-200: #bae6fd;
+    --color-primary-300: #7dd3fc;
+    --color-primary-400: #38bdf8;
+    --color-primary-500: #0ea5e9;
+    --color-primary-600: #0284c7;
+    --color-primary-700: #0369a1;
+    --color-primary-800: #075985;
+    --color-primary-900: #0c4a6e;
+  }
+
+  body {
+    @apply bg-gray-50 text-neutral-900;
+  }
+}
+
+/* Styles pour Material Icons */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Styles spécifiques pour la page Contact */
+#contact {
+  @apply min-h-screen bg-gray-50;
+}
+
+#contact .bg-primary-50 {
+  background-color: var(--color-primary-50);
+}
+
+#contact .bg-primary-600 {
+  background-color: var(--color-primary-600);
+}
+
+#contact .text-primary-600 {
+  color: var(--color-primary-600);
+}
+
+#contact .hover\:bg-primary-700:hover {
+  background-color: var(--color-primary-700);
+}
+
+#contact .focus\:ring-primary-500:focus {
+  --tw-ring-color: var(--color-primary-500);
+}
+
+#contact .focus\:border-primary-500:focus {
+  border-color: var(--color-primary-500);
+}
+
+/* Styles de base */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+} 
