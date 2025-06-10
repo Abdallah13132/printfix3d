@@ -1,0 +1,128 @@
+{
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question about our services? Need a custom quote? Our team is here to help you as soon as possible.",
+    "form": {
+      "title": "Send us a message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjects": {
+        "quote": "Quote request",
+        "info": "Information request",
+        "support": "Technical support",
+        "other": "Other"
+      },
+      "message": "Message",
+      "submit": "Send message",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": {
+        "title": "Address",
+        "value": "123 Innovation Street\n75001 Paris, France"
+      },
+      "hours": {
+        "title": "Opening Hours",
+        "value": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed"
+      }
+    },
+    "backToHome": "Back to Home"
+  },
+  "home": {
+    "hero": {
+      "title": "Give Your Object a Second Chance",
+      "subtitle": "Our 3D printing repair and reproduction service allows you to easily replace broken or missing parts. Simply upload a photo, and we'll take care of the rest.",
+      "cta": "Get Started",
+      "learnMore": "Learn More",
+      "stats": {
+        "satisfaction": "satisfied customers",
+        "delivery": "average delivery time"
+      }
+    },
+    "upload": {
+      "title": "Upload Your Image",
+      "subtitle": "Send us a photo of your broken object and we'll propose a suitable solution",
+      "button": "Choose File",
+      "dragText": "or drag and drop your file here",
+      "fileTypes": "Accepted formats: JPG, PNG, PDF",
+      "maxSize": "Maximum size: 10MB"
+    },
+    "process": {
+      "title": "How It Works",
+      "steps": {
+        "upload": {
+          "title": "Upload Your Photo",
+          "description": "Send us a clear photo of your broken object"
+        },
+        "quote": {
+          "title": "Get a Quote",
+          "description": "We analyze your request and send you a detailed quote"
+        },
+        "print": {
+          "title": "We Print",
+          "description": "We print your part with our professional 3D printers"
+        },
+        "delivery": {
+          "title": "Fast Delivery",
+          "description": "Your part is delivered to your home within 48h"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Our Pricing",
+      "subtitle": "Solutions adapted to all needs",
+      "basic": {
+        "title": "Basic",
+        "price": "From €29",
+        "features": [
+          "Simple parts",
+          "5-day delivery",
+          "Email support",
+          "Standard shipping"
+        ]
+      },
+      "pro": {
+        "title": "Professional",
+        "price": "From €49",
+        "features": [
+          "Complex parts",
+          "48h delivery",
+          "Priority support",
+          "Express shipping",
+          "1-year warranty"
+        ]
+      }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Discover the experiences of our satisfied customers"
+    },
+    "footer": {
+      "links": {
+        "services": "Services",
+        "gallery": "Gallery",
+        "pricing": "Pricing",
+        "contact": "Contact"
+      },
+      "social": {
+        "title": "Follow Us",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      },
+      "legal": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "cookies": "Cookie Policy"
+      },
+      "copyright": "© 2024 PrintFix3D. All rights reserved."
+    }
+  }
+} 

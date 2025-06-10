@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
+    const { t, i18n } = useTranslation();
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -52,6 +54,10 @@ export const Contact = () => {
         }
     };
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <div className="min-h-screen bg-gray-50"> 
             <div className="w-full max-w-screen-xl mx-auto p-4 md:p-8 font-sans">
@@ -90,29 +96,42 @@ export const Contact = () => {
                             PrintFix3D
                         </span>
                     </Link>
-                    <Link
-                        to="/"
-                        className="px-6 py-2 text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-all duration-300"
-                    >
-                        Retour à l'accueil
-                    </Link>
+                    <div className="flex items-center space-x-4">
+                        <button
+                            onClick={() => changeLanguage('fr')}
+                            className={`px-3 py-1 rounded ${i18n.language === 'fr' ? 'bg-primary-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+                        >
+                            FR
+                        </button>
+                        <button
+                            onClick={() => changeLanguage('en')}
+                            className={`px-3 py-1 rounded ${i18n.language === 'en' ? 'bg-primary-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+                        >
+                            EN
+                        </button>
+                        <Link
+                            to="/"
+                            className="px-6 py-2 text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-all duration-300"
+                        >
+                            {t('contact.backToHome')}
+                        </Link>
+                    </div>
                 </header>
 
                 {/* Contenu principal */}
                 <main className="flex flex-col gap-8">
                     {/* Titre de la page */}
                     <div className="text-center">
-                        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary-600">Contactez-nous</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary-600">{t('contact.title')}</h1>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            Une question sur nos services ? Besoin d'un devis personnalisé ? Notre équipe est là pour vous répondre
-                            dans les plus brefs délais.
+                            {t('contact.subtitle')}
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Formulaire de contact */}
                         <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                            <h2 className="text-xl md:text-2xl font-semibold mb-6 text-primary-600">Envoyez-nous un message</h2>
+                            <h2 className="text-xl md:text-2xl font-semibold mb-6 text-primary-600">{t('contact.form.title')}</h2>
                             
                             {status.message && (
                                 <div className={`mb-4 p-4 rounded-lg ${
@@ -128,7 +147,7 @@ export const Contact = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <label htmlFor="firstName" className="block text-sm font-medium mb-2 text-gray-700">
-                                            Prénom
+                                            {t('contact.form.firstName')}
                                         </label>
                                         <input
                                             type="text"
@@ -141,7 +160,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <label htmlFor="lastName" className="block text-sm font-medium mb-2 text-gray-700">
-                                            Nom
+                                            {t('contact.form.lastName')}
                                         </label>
                                         <input
                                             type="text"
@@ -156,7 +175,7 @@ export const Contact = () => {
 
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700">
-                                        Email
+                                        {t('contact.form.email')}
                                     </label>
                                     <input
                                         type="email"
@@ -170,7 +189,7 @@ export const Contact = () => {
 
                                 <div>
                                     <label htmlFor="phone" className="block text-sm font-medium mb-2 text-gray-700">
-                                        Téléphone
+                                        {t('contact.form.phone')}
                                     </label>
                                     <input
                                         type="tel"
@@ -183,7 +202,7 @@ export const Contact = () => {
 
                                 <div>
                                     <label htmlFor="subject" className="block text-sm font-medium mb-2 text-gray-700">
-                                        Sujet
+                                        {t('contact.form.subject')}
                                     </label>
                                     <select
                                         id="subject"
@@ -192,17 +211,17 @@ export const Contact = () => {
                                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300"
                                         required
                                     >
-                                        <option value="">Sélectionnez un sujet</option>
-                                        <option value="devis">Demande de devis</option>
-                                        <option value="information">Demande d'information</option>
-                                        <option value="support">Support technique</option>
-                                        <option value="other">Autre</option>
+                                        <option value="">{t('contact.form.subjectPlaceholder')}</option>
+                                        <option value="devis">{t('contact.form.subjects.quote')}</option>
+                                        <option value="information">{t('contact.form.subjects.info')}</option>
+                                        <option value="support">{t('contact.form.subjects.support')}</option>
+                                        <option value="other">{t('contact.form.subjects.other')}</option>
                                     </select>
                                 </div>
 
                                 <div>
                                     <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-700">
-                                        Message
+                                        {t('contact.form.message')}
                                     </label>
                                     <textarea
                                         id="message"
@@ -218,7 +237,7 @@ export const Contact = () => {
                                     type="submit"
                                     className="w-full py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105"
                                 >
-                                    Envoyer le message
+                                    {t('contact.form.submit')}
                                 </button>
                             </form>
                         </div>
@@ -226,60 +245,30 @@ export const Contact = () => {
                         {/* Informations de contact et carte */}
                         <div className="space-y-8">
                             <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                                <h2 className="text-xl md:text-2xl font-semibold mb-6 text-primary-600">Nos coordonnées</h2>
+                                <h2 className="text-xl md:text-2xl font-semibold mb-6 text-primary-600">{t('contact.info.title')}</h2>
                                 <div className="space-y-6">
                                     <div className="flex items-start">
                                         <span className="material-symbols-outlined text-primary-600 mr-3">location_on</span>
                                         <div>
-                                            <h3 className="font-medium text-gray-900">Adresse</h3>
-                                            <p className="text-gray-600">123 Rue de l'Innovation<br />75001 Paris, France</p>
+                                            <h3 className="font-medium text-gray-900">{t('contact.info.address.title')}</h3>
+                                            <p className="text-gray-600">{t('contact.info.address.value')}</p>
                                         </div>
                                     </div>
                                     
                                     <div className="flex items-start">
                                         <span className="material-symbols-outlined text-primary-600 mr-3">schedule</span>
                                         <div>
-                                            <h3 className="font-medium text-gray-900">Horaires d'ouverture</h3>
+                                            <h3 className="font-medium text-gray-900">{t('contact.info.hours.title')}</h3>
                                             <p className="text-gray-600">
-                                                Lundi - Vendredi: 9h00 - 18h00<br />
-                                                Samedi: 10h00 - 16h00<br />
-                                                Dimanche: Fermé
+                                                {t('contact.info.hours.value')}
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex items-start">
-                                        <span className="material-symbols-outlined text-primary-600 mr-3">phone</span>
-                                        <div>
-                                            <h3 className="font-medium text-gray-900">Téléphone</h3>
-                                            <p className="text-gray-600">+33 1 23 45 67 89</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="material-symbols-outlined text-primary-600 mr-3">mail</span>
-                                        <div>
-                                            <h3 className="font-medium text-gray-900">Email</h3>
-                                            <p className="text-gray-600">contact@printfix3d.fr</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Carte */}
-                            <div className="bg-white rounded-xl shadow-lg overflow-hidden h-64">
-                                <div className="w-full h-full bg-primary-50 flex items-center justify-center">
-                                    <span className="material-symbols-outlined text-6xl text-primary-600">map</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
-
-                {/* Footer */}
-                <footer className="mt-16 pt-8 border-t border-gray-200">
-                    <div className="text-center text-sm text-gray-600">
-                        <p>© {new Date().getFullYear()} PrintFix3D. Tous droits réservés.</p>
-                    </div>
-                </footer>
             </div>
         </div>
     );

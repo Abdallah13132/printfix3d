@@ -1,0 +1,128 @@
+{
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez une question sur nos services ? Besoin d'un devis personnalisé ? Notre équipe est là pour vous aider dans les plus brefs délais.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sélectionnez un sujet",
+      "subjects": {
+        "quote": "Demande de devis",
+        "info": "Demande d'information",
+        "support": "Support technique",
+        "other": "Autre"
+      },
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Nos coordonnées",
+      "address": {
+        "title": "Adresse",
+        "value": "123 Rue de l'Innovation\n75001 Paris, France"
+      },
+      "hours": {
+        "title": "Horaires d'ouverture",
+        "value": "Lundi - Vendredi: 9h00 - 18h00\nSamedi: 10h00 - 16h00\nDimanche: Fermé"
+      }
+    },
+    "backToHome": "Retour à l'accueil"
+  },
+  "home": {
+    "hero": {
+      "title": "Donner une seconde chance à votre objet",
+      "subtitle": "Notre service de réparation et reproduction par impression 3D vous permet de remplacer facilement des pièces cassées ou manquantes. Téléchargez simplement une photo, et nous nous occupons du reste.",
+      "cta": "Commencer maintenant",
+      "learnMore": "En savoir plus",
+      "stats": {
+        "satisfaction": "de clients satisfaits",
+        "delivery": "délai moyen"
+      }
+    },
+    "upload": {
+      "title": "Téléchargez votre image",
+      "subtitle": "Envoyez-nous une photo de votre objet cassé et nous vous proposerons une solution adaptée",
+      "button": "Choisir un fichier",
+      "dragText": "ou glissez-déposez votre fichier ici",
+      "fileTypes": "Formats acceptés : JPG, PNG, PDF",
+      "maxSize": "Taille maximale : 10MB"
+    },
+    "process": {
+      "title": "Comment ça marche",
+      "steps": {
+        "upload": {
+          "title": "Téléchargez votre photo",
+          "description": "Envoyez-nous une photo claire de votre objet cassé"
+        },
+        "quote": {
+          "title": "Recevez un devis",
+          "description": "Nous analysons votre demande et vous envoyons un devis détaillé"
+        },
+        "print": {
+          "title": "Nous imprimons",
+          "description": "Nous imprimons votre pièce avec nos imprimantes 3D professionnelles"
+        },
+        "delivery": {
+          "title": "Livraison rapide",
+          "description": "Votre pièce est livrée chez vous en 48h"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Nos tarifs",
+      "subtitle": "Des solutions adaptées à tous les besoins",
+      "basic": {
+        "title": "Basique",
+        "price": "À partir de 29€",
+        "features": [
+          "Pièces simples",
+          "Délai de 5 jours",
+          "Support email",
+          "Livraison standard"
+        ]
+      },
+      "pro": {
+        "title": "Professionnel",
+        "price": "À partir de 49€",
+        "features": [
+          "Pièces complexes",
+          "Délai de 48h",
+          "Support prioritaire",
+          "Livraison express",
+          "Garantie 1 an"
+        ]
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Découvrez les expériences de nos clients satisfaits"
+    },
+    "footer": {
+      "links": {
+        "services": "Services",
+        "gallery": "Galerie",
+        "pricing": "Tarifs",
+        "contact": "Contact"
+      },
+      "social": {
+        "title": "Suivez-nous",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      },
+      "legal": {
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "cookies": "Politique des cookies"
+      },
+      "copyright": "© 2024 PrintFix3D. Tous droits réservés."
+    }
+  }
+} 
